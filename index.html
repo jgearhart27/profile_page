@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jesse Messi's portfolio showcasing music, videos, and contact information."
+    />
+    <title>Jesse Messi | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Hey there!</h1>
+        <br>
+        <p>
+          I'm Jesse: <br />
+          A multilingual storyteller on a mission to bring peace and joy to
+          those without.
+        </p>
+      </header>
+
+      <section class="music">
+        <h2>Check out my music:</h2>
+        <div class="album-links">
+          <a
+            href="https://open.spotify.com/album/11RzxeJWhMDobg6mq8tDrb"
+            target="_blank"
+          >
+            <img
+              src="RING UPDATE Till Love Has Its Place - RRC.jpg"
+              alt="Album cover of Till Love Has Its Place"
+            />
+          </a>
+          <a
+            href="https://open.spotify.com/album/3eOBySwZkhxGEucEmZI2lW"
+            target="_blank"
+          >
+            <img src="Kokomo Single Art 2.JPEG" alt="Album cover of Kokomo" />
+          </a>
+          <a
+            href="https://open.spotify.com/album/1GKmpzjYDEhanhue9bX7oX"
+            target="_blank"
+          >
+            <img src="PRODIGAL.png" alt="Album cover of Prodigal" />
+          </a>
+          <div class="spotify-player">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/album/11RzxeJWhMDobg6mq8tDrb?utm_source=generator"
+              width="100%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/album/3BDw9ojo9tfNVX27GVgmHn?utm_source=generator"
+              width="100%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="video">
+        <h2>Videos I've made:</h2>
+        <div class="video-links">
+          <a href="https://www.youtube.com/watch?v=hdCFhVwaynI" target="_blank">
+            <img
+              src="BEGINNER'S LANGUAGE LEARNING ROUTINE.png"
+              alt="Video thumbnail for language learning routine"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=E3_iz1gXeA8&t=16s"`
+            target="_blank"
+          >
+            <img
+              src="language apps.png"
+              alt="Video thumbnail for language apps review"
+            />
+          </a>
+          <a href="https://www.youtube.com/watch?v=6aK_ICy98zk" target="_blank">
+            <img
+              src="what to do when stuck in a language.png"
+              alt="Video thumbnail for getting unstuck in language learning"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2>Let's get in touch!</h2>
+        <form id="contact-form">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+
+          <button type="submit" id="submit">Submit</button>
+        </form>
+        <p id="form-response" style="display: none; color: #0f0">
+          Your message has been sent!
+        </p>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; 2025 Jesse Gearhart | All rights reserved</p>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
