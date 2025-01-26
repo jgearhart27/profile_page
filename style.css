@@ -39,6 +39,7 @@ body {
 .header h1 {
   color: rgb(245, 81, 81);
   font-weight: bold;
+  height: 500px;
   animation: fade-up 0.5s ease-in;
 }
 .header img {
