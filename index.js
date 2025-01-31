@@ -1,3 +1,44 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const githubUsername = "jgearhart27";
+  const projectsContainer = document.getElementById("github-projects");
+
+  async function fetchGitHubProjects() {
+    try {
+      const response = await fetch(
+        `https://api.github.com/users/${githubUsername}/repos`
+      );
+      const repositories = await response.json();
+
+      projectsContainer.innerHTML = "";
+
+      repositories.forEach((repo) => {
+        if (
+          (repo.name !== "express-digi",
+          "jgearhart27",
+          "learn-git",
+          "open-source-11")
+        ) {
+          const projectElement = document.createElement("div");
+          projectElement.classList.add("project-card");
+
+          projectElement.innerHTML = `<h3>${repo.name}</h3>
+        <p>${
+          repo.description ? repo.description : "No Description Available"
+        }<p>
+        <a href="${repo.html_url}" target="_blank">View on GitHub</a>`;
+
+          projectsContainer.appendChild(projectElement);
+        }
+      });
+    } catch (error) {
+      projectsContainer.innerHTML =
+        "<p style='color: red;'>Failed to load projects</p>";
+      console.error("Error fetching GitHub repositories:", error);
+    }
+  }
+  fetchGitHubProjects();
+});
+
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
