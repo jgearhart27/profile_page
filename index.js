@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const githubUsername = "jgearhart27";
   const projectsContainer = document.getElementById("github-projects");
+  const excludedRepos = [
+    "express-digi",
+    "jgearhart27",
+    "learn-git",
+    "open-source-11",
+  ];
 
   async function fetchGitHubProjects() {
     try {
@@ -12,12 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       projectsContainer.innerHTML = "";
 
       repositories.forEach((repo) => {
-        if (
-          (repo.name !== "express-digi",
-          "jgearhart27",
-          "learn-git",
-          "open-source-11")
-        ) {
+        if (!excludedRepos.includes(repo.name)) {
           const projectElement = document.createElement("div");
           projectElement.classList.add("project-card");
 
